@@ -1,0 +1,44 @@
+body {
+  font-family: "Courier", Times, serif;
+  background: rgb(245, 190, 10);
+  background: linear-gradient(0deg, #d68e18 25%, #4d8639 50%, #7fa7b3 100%);
+}
+.container {
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.h1 {
+  text-shadow: 5px 5px 8px rgb(125, 79, 79);
+  flex: inherit;
+  border: 2px solid;
+  margin: 5px;
+  padding: 5px;
+}
+
+.list {
+  list-style-type: none;
+  width: 300px;
+  height: 200px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  background-color: #4d86c9;
+  font-weight: bolder;
+}
+.h2 {
+  text-shadow: 5px 5px 8px black;
+}
+
+.bio {
+  background-color: #4d86c9;
+  border: solid 2px;
+}
+
+.footer {
+  position: relative;
+  border: 2px solid black;
+  background-color: #4d8639;
+  color: white;
+  text-align: right;
+  padding: 5px;
+  margin: 5px;
+}
