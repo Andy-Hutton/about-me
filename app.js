@@ -1,6 +1,6 @@
 let user = prompt("What is your name?");
 console.log("Todays visitor is " + user);
-// document.write(user);
+document.write(user);
 console.log(user);
 
 let learn = confirm("Would you like to  learn about me?");
@@ -19,9 +19,11 @@ if (uni == false) {
 
 let wife = confirm(user + " Do you think im married?");
 if (wife == true) {
-  alert("I do, we have been married for six years.");
+  alert("I am, we have been married for six years.");
 } else {
-  alert("the single life wasnt for me!");
+  alert(
+    "the single life wasnt for me, I always wanted to be married and have children!"
+  );
 }
 
 let children = confirm("Do you think I have children");
@@ -31,19 +33,20 @@ if (children == true) {
   alert(user + "I would get a lot more sleep if I didnt!");
 }
 
-let drink = prompt("What is your favourite colour?");
+let car = prompt("What car do I drive? STI, C63, Type R");
 
-switch (colour.toLowerCase()) {
-  case "red":
-    console.log("Your favourite colour was red. Gross.");
+switch (car.toLowerCase()) {
+  case "sti":
+    alert("I used to before the children.");
     break;
-  case "green":
-    console.log("Nice. Good choice.");
+  case "c63":
+    alert("Nope worked for Mercedes for a decade, I know the problems!");
+    break;
+  case "type r":
+    alert("yes its the perfect family hot hatch, Theo calls it the race car");
     break;
   default:
-    console.log(
-      "Pretty sure that colour doesn't exist. Have you thought about red or green? ¯\\_(ツ)_/¯"
-    );
+    alert("what an awful choice!");
 }
 
 // console.log("Your favourite type of motorsport is " + motorsport);
