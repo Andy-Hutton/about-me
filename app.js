@@ -1,7 +1,16 @@
+let Points = 0;
 let user = prompt("What is your name?");
 console.log("Todays visitor is " + user);
 document.write(user);
 console.log(user);
+
+while (!user) {
+  user = prompt("I need your name, so you can play the game");
+}
+
+if (user == "andy") {
+  alert("Still not working yet?");
+}
 
 let learn = confirm("Would you like to  learn about me?");
 if (learn == true) {
@@ -15,6 +24,7 @@ if (uni == false) {
   alert("I started working straight after my A levels.");
 } else {
   alert("I should have! But I started working.");
+  Points++;
 }
 
 let wife = confirm(user + " Do you think im married?");
@@ -24,6 +34,7 @@ if (wife == true) {
   alert(
     "the single life wasnt for me, I always wanted to be married and have children!"
   );
+  Points++;
 }
 
 let children = confirm("Do you think I have children");
@@ -31,6 +42,7 @@ if (children == true) {
   alert("I have two amazing boys");
 } else {
   alert(user + "I would get a lot more sleep if I didnt!");
+  Points++;
 }
 
 let car = prompt("What car do I drive? STI, C63, Type R");
@@ -44,28 +56,34 @@ switch (car.toLowerCase()) {
     break;
   case "type r":
     alert("yes its the perfect family hot hatch, Theo calls it the race car");
+    Points++;
     break;
   default:
     alert("what an awful choice!");
 }
+ageQ = prompt(
+  "What is my age, guess a number between 30- 40? You have 4 tries!"
+);
+let ageQ = 38;
+let attempts = 3;
+while (ageQ != 38 && attempts > 0) {
+  // help* indicate too high or too low?
+  ageQ = prompt("try again");
+  console.log("Correct!");
+  prompt("Well done");
+  Points++;
+}
+alert(user + " I hope you have been paying attention...");
 
-// console.log("Your favourite type of motorsport is " + motorsport);
+let carQuestion = prompt("Name one car on my Top 5 list").toLowerCase();
 
-// alert("Hi there, " + user + ". Your favourite motorsport is " + motorsport);
-// let track = prompt(user + " which is your favorite race track?");
-// console.log(user + " which is your favorite race track?");
+let topCars = ["f40", "type r", "gt40", "22b", "gtr"];
 
-// let conditions = prompt(user + " what are the best racing conditions");
-// console.log(user + " what are the best racing conditions");
-
-// alert(
-//   "Hey " +
-//     user +
-//     " your favorite motorsport is " +
-//     motorsport +
-//     " at " +
-//     track +
-//     " in " +
-//     conditions +
-//     " condtions"
-// );
+for (let i = 0; i < topCars.length; i++)
+  if (carQuestion == topCars[i]) {
+    alert(carQuestion + " was correct!");
+    Points++;
+  }
+{
+  alert(user + "well done, you scored" + points + "/7");
+}
