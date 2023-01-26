@@ -34,7 +34,7 @@ body {
   margin: 20px;
   border: solid 2px black;
   background-color: #4d86c9;
-  padding: 20px
+  padding: 20px;
 }
 
 .job {
@@ -42,7 +42,7 @@ body {
   bottom: 0;
   width: 20%;
   position: absolute;
-  background-color: #ece635;
+  background-color: #4d86c9;
   font-weight: bolder;
   margin: 20px;
   padding: 20px;
@@ -70,7 +70,13 @@ body {
   border: solid 2px black;
   margin: 20px;
 }
-footer(
+footer {
   bottom: 0;
-  background-color: 4d8639;
-)
+  width: 95%;
+  position: relative;
+  background-color: #4d86c9;
+  font-weight: bolder;
+  margin: 20px;
+  padding: 20px;
+  border: solid 2px black;
+}

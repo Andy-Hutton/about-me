@@ -1,3 +1,5 @@
+"use strict";
+
 let Points = 0;
 let user = prompt("What is your name?");
 console.log("Todays visitor is " + user);
@@ -14,7 +16,11 @@ if (user == "andy") {
 
 let learn = confirm("Would you like to  learn about me?");
 if (learn == true) {
-  alert("Hey " + user + " lets learn about me.");
+  alert(
+    "Hey " +
+      user +
+      " lets learn about me. With these questions please anwser OK for yes, and cancel for No"
+  );
 } else {
   alert("why dont you want to know about me.");
 }
