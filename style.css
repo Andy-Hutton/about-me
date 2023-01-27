@@ -5,14 +5,21 @@ section {
   border: 2px solid black;
   width: 100%;
   margin: 5rem auto 4 auto;
-  height: 40rem;
+  height: 30rem;
   position: relative;
 }
 
 body {
   font-family: "Courier", Times, serif;
-  background: rgb(245, 190, 10);
-  background: linear-gradient(0deg, #d68e18 25%, #4d8639 50%, #7fa7b3 100%);
+  background: rgb(46, 117, 186);
+  background: linear-gradient(
+    160deg,
+    rgba(46, 117, 186, 1) 40%,
+    rgba(157, 171, 132, 1) 21%,
+    rgba(226, 205, 98, 1) 34%,
+    rgba(189, 161, 79, 1) 60%,
+    rgba(128, 87, 46, 1) 90%
+  );
 }
 
 .h1 {
@@ -50,21 +57,24 @@ body {
 }
 
 .car {
-  right: 0;
+  list-style-type: decimal;
+  right: 20rem;
   width: 20%;
   position: absolute;
-  background-color: #4d86c9;
+  /* background-color: #4d86c9; */
   font-weight: bolder;
   padding: 20px;
   border: solid 2px black;
   margin: 20px;
 }
 .film {
+  background: src= "./jurassic park.jpg";
+  list-style: decimal;
   right: 0;
-  bottom: 0;
+  top: 0;
   width: 20%;
   position: absolute;
-  background-color: #4d86c9;
+  /* background-color: #4d86c9; */
   font-weight: bolder;
   padding: 20px;
   border: solid 2px black;
@@ -79,4 +89,8 @@ footer {
   margin: 20px;
   padding: 20px;
   border: solid 2px black;
+}
+
+ol {
+  list-style-type: decimal;
 }

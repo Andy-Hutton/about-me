@@ -26,7 +26,7 @@ if (learn == true) {
 }
 
 let uni = confirm("Do you think i went to university.");
-if (uni == false) {
+if (uni == true) {
   alert("Correct I didn't go, I started working straight after my A levels.");
   Points++;
 } else {
@@ -49,7 +49,6 @@ if (children == true) {
   Points++;
 } else {
   alert(user + " your funny, I would get a lot more sleep if I didnt!");
-  Points++;
 }
 
 let car = prompt("What car do I drive? STI, C63, Type R");
@@ -73,34 +72,68 @@ switch (car.toLowerCase()) {
 let ageQ = prompt(
   "What is my age? Guess a number between 30- 40? You have 4 tries!"
 );
-let attempts = 3;
+let ageAttempts = 3;
 
-while (ageQ != 38 && attempts > 0) {
+while (ageQ != 38 && ageAttempts > 0) {
   // ageQ = prompt("try again " + attempts + " attempts left");
-
+  alert("thats not right you have " + ageAttempts + " remaining");
   if (ageQ > 38) {
-    prompt("try a lower number " + attempts + " attempts left");
+    ageQ = prompt(
+      "What is my age? Guess a number between 30- 40? Try a lower number."
+    );
+  } else if (ageQ < 38) {
+    ageQ = prompt(
+      "What is my age? Guess a number between 30- 40? Try a higher number."
+    );
+  } else {
+    ageQ = prompt(
+      "What is my age? Guess a number between 30- 40? Try guessing a number."
+    );
   }
-  if (ageQ < 38) {
-    prompt("try a higher number " + attempts + " attempts left");
-  }
-  attempts--;
+  ageAttempts--;
 }
-if (ageQ === true) {
-  prompt("Nice, you guessed my age");
+if (ageQ == 38) {
+  alert("Nice, you guessed my age it was 38 you had " + ageAttempts + " left");
   Points++;
+} else {
+  alert("sorry you have 0 attempts remaining, I'm 38!");
 }
-alert(user + " I hope you have been paying attention...");
+alert(user + " Good luck for the final question!");
 
 let carQuestion = prompt("Name one car on my Top 5 list").toLowerCase();
-
+let carAttempts = 5;
 let topCars = ["f40", "type r", "gt40", "22b", "gtr"];
+while (carQuestion != topCars.length && carAttempts > 0) {
+  if (carQuestion != topCars) {
+    prompt("Guess again you have " + carAttempts + " remaining.");
 
-for (let i = 0; i < topCars.length; i++)
-  if (carQuestion == topCars[i]) {
-    alert(carQuestion + " was correct!");
-    Points++;
+    carAttempts--;
   }
-{
-  alert(user + "well done, you scored" + points + "/7");
 }
+if (carQuestion == topCars.length) {
+  alert("nice, your correct! You did it in" + carAttempts);
+  Points++;
+} else {
+  alert(
+    "sorry you have 0 attempts remaining, you could have chose F40, 22B, GT40, GTR, Type R"
+  );
+}
+alert("Well done " + user + " you got" + points + " /7");
+
+// for (let i = 0; i < topCars.length; i++)
+//   if (carQuestion == topCars[i]) {
+//     alert(
+//       carQuestion +
+//         " was correct!" +
+//         carAttempts +
+//         " remaining. The correct anwsers were" +
+//         topCars
+//     );
+//     Points++;
+//   } else {
+//     carQuestion = alert("Try guessing again!");
+//   }
+//   if (carQuestion =
+// carAttempts--;
+
+//  alert(user + "well done, you scored" + points + "/7");
