@@ -22,11 +22,19 @@ body {
   );
 }
 
-.h1 {
+.h1div {
+  position: relative;
+  font-size: 2.5rem;
   text-shadow: 5px 5px 8px rgb(125, 79, 79);
   border: 2px solid;
   margin: 5px;
   padding: 5px;
+}
+
+.welcome {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .h2 {
@@ -93,4 +101,11 @@ footer {
 
 ol {
   list-style-type: decimal;
+}
+ul {
+  list-style-type: decimal;
+}
+linkcolour {
+  color: black;
+  background: rgba(226, 205, 98, 1);
 }
