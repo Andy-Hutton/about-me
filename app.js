@@ -43,7 +43,7 @@ uni();
 
 // question 3
 function wife() {
-  let wife = confirm(user + " Do you think im married?");
+  let wife = confirm(user + " do you think im married?");
   if (wife == true) {
     alert("Correct, we have been married for six years.");
     Points++;
@@ -99,7 +99,7 @@ function age() {
 
   while (ageQ != 38 && ageAttempts > 0) {
     // ageQ = prompt("try again " + attempts + " attempts left");
-    alert("thats not right you have " + ageAttempts + " remaining");
+    alert("thats not right you have " + ageAttempts, +" remaining");
     if (ageQ > 38) {
       ageQ = prompt(
         "What is my age? Guess a number between 30- 40? Try a lower number."
@@ -118,7 +118,7 @@ function age() {
   // }
   if (ageQ == 38) {
     alert(
-      "Nice, you guessed my age it was 38 you had " + ageAttempts + " left"
+      "Nice, you guessed my age it was 38!You had " + ageAttempts + " left"
     );
     Points++;
   } else {
@@ -129,7 +129,7 @@ age();
 
 // question 7
 
-alert(user + " Good luck for the final question!");
+alert(user + " good luck for the final question!");
 function car2() {
   let carQuestion = prompt("Name one car on my Top 5 list").toLowerCase();
 
@@ -146,10 +146,14 @@ function car2() {
       }
     }
     if (carAttempts > 0) {
-      carQuestion = prompt("that is wrong, please try again.");
+      carQuestion = prompt(
+        "that is wrong, please try again. You have " +
+          carAttempts +
+          " remaining."
+      );
       carAttempts--;
     }
   }
 }
 car2();
-alert(user + "well done, you scored" + Points + "/7");
+alert(user + " well done, you scored " + Points + " /7");
